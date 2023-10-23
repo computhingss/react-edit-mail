@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Mail from './components/Mail'
+
+let arr2=["mail@1","mail@2","mail@3","mail@4","mail@5"]
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+<div className='Mails'>
+{
+  arr2.map(function(mail){
+    return <Mail mail={mail} />;
+  })
+}
+</div>
     </div>
   );
 }
